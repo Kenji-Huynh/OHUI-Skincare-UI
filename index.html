@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OHUI Skincare</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="hero-container">
+      <!-- Background with flowers and light effects -->
+      <div class="hero-background"></div>
+      <div class="flower flower1"></div>
+      <div class="flower flower2"></div>
+      <div class="flower flower3"></div>
+      <div class="flower flower4"></div>
+      <div class="light-particle particle1"></div>
+      <div class="light-particle particle2"></div>
+
+      <!-- Thêm các bong bóng lơ lửng -->
+      <div class="bubble bubble1"></div>
+      <div class="bubble bubble2"></div>
+      <div class="bubble bubble3"></div>
+      <div class="bubble bubble4"></div>
+      <div class="bubble bubble5"></div>
+
+      <!-- Product container -->
+      <div class="product-container">
+        <!-- Left side with product image -->
+        <div class="product-image-container">
+          <div class="product-bubble"></div>
+          <img
+            src="img/hero-img.png"
+            alt="OHUI Cleaning Foam"
+            class="product-image"
+          />
+        </div>
+
+        <!-- Right side with text and feature bubbles -->
+        <div class="product-text">
+          <div class="product-title">
+            <h1>SENSITIVE</h1>
+            <h2>GENTELMENT</h2>
+            <h2>CLEANING FOARM</h2>
+          </div>
+          <div class="product-desc">Duy nhất trong tháng 06/2017</div>
+
+          <!-- Feature bubbles with animation -->
+          <div class="feature-bubbles">
+            <div class="feature-bubble">TRẮNG DA<br />VƯỢT<br />TRỘI</div>
+            <div class="feature-bubble">NGĂN<br />NGỪA<br />CHÂN LÔNG</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thêm phần giới thiệu sản phẩm -->
+    <div class="product-details-container">
+      <div class="product-details-left">
+        <!-- Lớp 1: Background hồng dày ở dưới -->
+        <div class="pink-background-layer"></div>
+
+        <!-- Lớp 2: Đường viền hồng đậm -->
+        <div class="pink-border-layer"></div>
+
+        <!-- Lớp 3: Hình sản phẩm (để trống cho bạn thêm sau) -->
+        <div class="product-image-detail"></div>
+      </div>
+
+      <div class="product-details-right">
+        <h2 class="product-details-title">KEM DƯỠNG DA</h2>
+
+        <div class="product-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" class="check-icon">
+                <circle cx="12" cy="12" r="10" fill="#e91e63" />
+                <path
+                  d="M9 12l2 2 4-4"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div class="feature-text">
+              Bổ sung lượng dầu – nước cần thiết cho làn da, cho da ẩm bên trong
+              ráo mịn bên ngoài.
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" class="check-icon">
+                <circle cx="12" cy="12" r="10" fill="#e91e63" />
+                <path
+                  d="M9 12l2 2 4-4"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div class="feature-text">
+              Duy trì độ ẩm suốt cả ngày, cho cảm giác da mềm mại và căng sáng.
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" class="check-icon">
+                <circle cx="12" cy="12" r="10" fill="#e91e63" />
+                <path
+                  d="M9 12l2 2 4-4"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div class="feature-text">
+              Se khít lỗ chân lông, hỗ trợ loại bỏ nhẹ nhàng lớp tế bào chết và
+              bã nhờn.
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" class="check-icon">
+                <circle cx="12" cy="12" r="10" fill="#e91e63" />
+                <path
+                  d="M9 12l2 2 4-4"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div class="feature-text">
+              Tạo lớp màng ẩm vững chắc cho da, hạn chế tình trạng thất thoát độ
+              ẩm.
+            </div>
+          </div>
+        </div>
+
+        <button class="buy-button">Đặt mua sản phẩm</button>
+      </div>
+    </div>
+
+    <!-- Thêm phần tính năng sản phẩm với hình ảnh -->
+    <div class="product-features-banner">
+      <div class="feature-banner-item">
+        <div class="feature-banner-image">
+          <!-- Ảnh sẽ được thêm vào qua CSS background hoặc img tag -->
+        </div>
+        <div class="feature-banner-content">
+          <h3 class="feature-banner-title">TẬN HƯỞNG VỚI LÀN DA TRẮNG MỊN</h3>
+          <p class="feature-banner-desc">
+            Hấp thụ vào da nhanh chóng, tạo nên làn da căng mượt đáng ngạc nhiên
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-banner-item">
+        <div class="feature-banner-image">
+          <!-- Ảnh sẽ được thêm vào qua CSS background hoặc img tag -->
+        </div>
+        <div class="feature-banner-content">
+          <h3 class="feature-banner-title">
+            ĐƯỢC CHIẾT XUẤT HOÀN TOÀN TỰ NHIÊN
+          </h3>
+          <p class="feature-banner-desc">
+            Hơn 80% thành phần là chiết xuất thước dược và các thành phần có
+            nguồn gốc thiên nhiên
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thêm phần mới sau product-features-banner -->
+    <div class="product-highlight-container">
+      <div class="product-highlight-left">
+        <img
+          src="img/kem-duong.png"
+          alt="Kem dưỡng OHUI"
+          class="product-highlight-image"
+        />
+      </div>
+
+      <div class="product-highlight-right">
+        <h2 class="highlight-title">
+          <span class="pink-text">KEM DƯỠNG</span> OHUI
+        </h2>
+
+        <div class="highlight-features">
+          <div class="highlight-feature-item">
+            <p class="highlight-text">
+              TRẢI NGHIỆM LÀN DA TINH KHIẾT TRẮNG MỊN
+            </p>
+            <div class="feature-line"></div>
+          </div>
+
+          <div class="highlight-feature-item">
+            <p class="highlight-text">TRẮNG SÁNG TỪ BÊN TRONG</p>
+            <div class="feature-line"></div>
+          </div>
+
+          <div class="highlight-feature-item">
+            <p class="highlight-text">TÁC ĐỘNG MỘT CÁCH TỰ NHIÊN</p>
+            <div class="feature-line"></div>
+          </div>
+
+          <div class="highlight-feature-item">
+            <p class="highlight-text">
+              HIỆU QUẢ CHỐNG NẮNG, NGĂN NGỪA TỪ NGOÀI
+            </p>
+            <div class="feature-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Thêm banner natural skincare - hình ảnh có sẵn đầy đủ -->
+    <div class="natural-banner-container">
+      <img
+        src="img/banner-2.png"
+        alt="Superior Skincare - 100% Natural Elements"
+        class="natural-banner-image"
+      />
+    </div>
+
+    <!-- Thêm phần research và công nghệ -->
+    <div class="product-research-container">
+      <div class="product-research-left">
+        <div class="research-image-wrapper">
+          <img
+            src="img/shape.png"
+            alt="Background shape"
+            class="research-bg-image"
+          />
+          <img
+            src="img/cream.png"
+            alt="OHUI Miracle Moisture Cream"
+            class="research-product-image"
+          />
+        </div>
+      </div>
+
+      <div class="product-research-right">
+        <h2 class="research-title">
+          Sự kết hợp hoàn hảo từ thiên nhiên, công nghệ và sự tận tâm
+        </h2>
+        <div class="research-divider"></div>
+
+        <p class="research-intro">
+          Cũng nhìn lại những con số ấn tượng, là minh chứng cho quá trình
+          nghiên cứu bền bỉ, nỗ lực chắt lọc tinh túy từ thiên nhiên và ứng dụng
+          công nghệ để phát triển tinh chất ngăn ngừa lão hóa sớm Prime Advancer
+          Ampoule Serum – 1 trong những sản phẩm được yêu thích nhất của O HUI:
+        </p>
+
+        <ul class="research-stats">
+          <li>96 nhà nghiên cứu đã được tập hợp</li>
+          <li>Làm việc trong 45 tháng liên tục</li>
+          <li>Sàng lọc tổng cộng từ 637 loại nguyên liệu</li>
+          <li>Thực hiện hơn 700 thí nghiệm</li>
+        </ul>
+
+        <p class="research-detail">
+          Quá trình bền bỉ này tựa như việc chọn lọc những viên đá tốt nhất ẩn
+          sâu trong lớp đất đá, cùng kỹ thuật lành nghề và tinh xảo của người
+          một nghề nhân chế tác đá trang sức, tạo ra viên đá quý hoàn hảo nhất
+          từ kiểu dáng đến giá trị kỷ điệu cho từng thiết kế sản phẩm của O
+          HUI..
+        </p>
+
+        <p class="research-conclusion">
+          O HUI đã thực hiện nhiều phân tích chính xác về hiệu quả và tìm ra sự
+          kết hợp tối ưu của từng thành phần với công nghệ độc quyền cùng sự tận
+          tâm vì mục tiêu mang lại làn da khỏe mạnh và hoàn hảo nhất. Không đơn
+          thuần chạy theo xu hướng sử dụng các thành phần "mới nổi", O HUI cùng
+          các nhà nghiên cứu giàu kinh nghiệm liên tục đúc kết trong thời gian
+          dài để gửi gắm những nguyên liệu chất lượng cao mang lại hiệu quả tốt
+          nhất vào từng sản phẩm.
+        </p>
+      </div>
+    </div>
+
+    <!-- Thêm phần sản phẩm nổi bật -->
+    <div class="product-catalog-section">
+      <div class="section-divider"></div>
+
+      <h2 class="catalog-title">
+        <span class="pink-text">SẢN PHẨM</span> OHUI
+      </h2>
+
+      <div class="product-catalog">
+        <div class="product-card">
+          <div class="product-card-image">
+            <img
+              src="img/product-1.png"
+              alt="Kem dưỡng ẩm sâu OHUI Miracle Moisture Cream"
+            />
+          </div>
+          <div class="product-card-content">
+            <h3 class="product-card-title">
+              Kem dưỡng ẩm sâu OHUI Miracle Moisture Cream
+            </h3>
+            <p class="product-card-capacity">Thể tích: 60ml</p>
+            <p class="product-card-price">1,500,000 VND</p>
+            <a href="#" class="product-card-button">Đặt mua sản phẩm</a>
+          </div>
+          <div class="product-card-hover"></div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-image">
+            <img
+              src="img/product-2.png"
+              alt="Tinh chất dưỡng ẩm OHUI Miracle Moisture Essence"
+            />
+          </div>
+          <div class="product-card-content">
+            <h3 class="product-card-title">
+              Tinh chất dưỡng ẩm OHUI Miracle Moisture Essence
+            </h3>
+            <p class="product-card-capacity">Thể tích: 50ml</p>
+            <p class="product-card-price">1,600,000 VND</p>
+            <a href="#" class="product-card-button">Đặt mua sản phẩm</a>
+          </div>
+          <div class="product-card-hover"></div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-image">
+            <img
+              src="img/product-3.png"
+              alt="Tinh chất siêu cấp ẩm OHUI Miracle Moisture Ampoule 777"
+            />
+          </div>
+          <div class="product-card-content">
+            <h3 class="product-card-title">
+              Tinh chất siêu cấp ẩm OHUI Miracle Moisture Ampoule 777
+            </h3>
+            <p class="product-card-capacity">Thể tích: 7ml x 7 tuýp</p>
+            <p class="product-card-price">2,800,000 VND</p>
+            <a href="#" class="product-card-button">Đặt mua sản phẩm</a>
+          </div>
+          <div class="product-card-hover"></div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Thêm phần cảm nhận khách hàng -->
+    <div class="testimonials-container">
+      <!-- Thêm container cho hoa anh đào -->
+      <div class="sakura-container"></div>
+
+      <h2 class="testimonials-title">CẢM NHẬN KHÁCH HÀNG VỀ KEM DƯỠNG DA</h2>
+
+      <div class="testimonials-list">
+        <div class="testimonial-item">
+          <div class="testimonial-image-wrapper">
+            <img
+              src="img/customer-1.png"
+              alt="Hoàng Thị Huyền"
+              class="testimonial-image"
+            />
+          </div>
+          <div class="testimonial-content">
+            <h3 class="testimonial-name">Hoàng Thị Huyền - 1995 - Đắc Lắc</h3>
+            <p class="testimonial-text">
+              Một trong những điều tôi thích nhất về kem dưỡng Ohui là mùi hương
+              nhẹ nhàng và thư giãn. Mỗi lần thoa kem, tôi cảm thấy rất thư giãn
+              và dễ chịu. Hơn nữa, kem dưỡng này cung cấp độ ẩm tuyệt vời cho da
+              mà không gây nhờn dính, khiến da tôi luôn mềm mại và mịn màng. Đây
+              là sản phẩm không thể thiếu trong quy trình dưỡng da của tôi!
+            </p>
+          </div>
+          <div class="flower-decoration flower-1"></div>
+        </div>
+
+        <div class="testimonial-item">
+          <div class="testimonial-image-wrapper">
+            <img
+              src="img/customer-2.png"
+              alt="Nguyễn Thị Loan"
+              class="testimonial-image"
+            />
+          </div>
+          <div class="testimonial-content">
+            <h3 class="testimonial-name">Nguyễn Thị Loan - 1999 - Hà Nội</h3>
+            <p class="testimonial-text">
+              Tôi có làn da khô và rất dễ bị bong tróc vào mùa đông. Sau khi sử
+              dụng kem dưỡng Ohui, da tôi cảm thấy mịn màng và đủ ẩm cả ngày
+              dài. Kem thẩm thấu nhanh, không gây nhờn rít, và đặc biệt là da
+              tôi không còn bị khô rát nữa. Sau một thời gian sử dụng, da sáng
+              và mềm mại hơn hẳn. Đây là sản phẩm tuyệt vời cho những ai có làn
+              da khô.
+            </p>
+          </div>
+          <div class="flower-decoration flower-2"></div>
+        </div>
+
+        <div class="testimonial-item">
+          <div class="testimonial-image-wrapper">
+            <img
+              src="img/customer-3.png"
+              alt="Trịnh Thị Hiệp Sinh"
+              class="testimonial-image"
+            />
+          </div>
+          <div class="testimonial-content">
+            <h3 class="testimonial-name">
+              Trịnh Thị Hiệp Sinh - 1989 - Vĩnh Tường
+            </h3>
+            <p class="testimonial-text">
+              Tôi bắt đầu sử dụng kem dưỡng Ohui sau khi bước vào độ tuổi 30 và
+              tôi cảm thấy sản phẩm này thực sự hiệu quả trong việc chống lão
+              hóa. Da tôi cảm thấy căng mịn hơn, các nếp nhăn mờ đi rõ rệt, đặc
+              biệt là vùng mắt. Kem có kết cấu nhẹ nhàng, không gây bí da và
+              mang lại cảm giác thoải mái mỗi lần sử dụng. Tôi cảm nhận rõ ràng
+              làn da khỏe mạnh hơn chỉ sau vài tuần.
+            </p>
+          </div>
+          <div class="flower-decoration flower-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thêm phần footer vào cuối trang -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="img/logo.png" alt="Nuta Comestic" class="footer-logo" />
+          <p class="footer-address">
+            <strong>Địa chỉ:</strong> 23 đường D4, KDC Him Lam, phường Tân Hưng,
+            quận 7, TPHCM
+          </p>
+          <p class="footer-hotline"><strong>Hotline:</strong> 093 721 5599</p>
+          <p class="footer-website"><strong>Website:</strong> nuta.io</p>
+        </div>
+
+        <div class="footer-center">
+          <h3 class="footer-title">ĐỊA CHỈ CÁC CHI NHÁNH</h3>
+          <div class="footer-branch">
+            <p class="branch-name">
+              <strong>CƠ SỞ CỬA HÀNG 01:</strong> 29F Hai Bà Trưng-Hoàn Kiếm-HN
+            </p>
+            <p class="branch-phone">Điện thoại: 043 9366 366</p>
+          </div>
+          <div class="footer-branch">
+            <p class="branch-name">
+              <strong>CƠ SỞ CỬA HÀNG 02:</strong> 30 Hai Bà Trưng-Hoàn Kiếm-HN
+            </p>
+            <p class="branch-phone">Điện thoại: 043 9366 367</p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <h3 class="footer-title">CHỨNG NHẬN VỀ CHÚNG TÔI</h3>
+          <div class="footer-certificates">
+            <img
+              src="img/certificate-1.png"
+              alt="GMP Certified"
+              class="certificate-img"
+            />
+            <img
+              src="img/certificate-2.png"
+              alt="ISO Certified"
+              class="certificate-img"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Thêm script này vào trước thẻ đóng </body> -->
+    <script>
+      // Hàm tạo hoa anh đào
+      function createSakura() {
+        const sakuraContainer = document.querySelector(".sakura-container");
+        if (!sakuraContainer) return;
+
+        // Số lượng hoa anh đào (điều chỉnh số lượng ở đây)
+        const sakuraCount = 25;
+
+        // Tạo các hoa anh đào ban đầu
+        for (let i = 0; i < sakuraCount; i++) {
+          createSakuraElement(sakuraContainer);
+        }
+
+        // Tạo thêm hoa anh đào mới để duy trì hiệu ứng liên tục
+        setInterval(() => {
+          createSakuraElement(sakuraContainer);
+        }, 1000); // Tạo hoa mới mỗi 1 giây
+      }
+
+      // Hàm tạo phần tử hoa anh đào
+      function createSakuraElement(container) {
+        // Tạo một phần tử hoa mới
+        const sakura = document.createElement("div");
+        sakura.className = "sakura";
+
+        // Kích thước ngẫu nhiên từ 15px đến 35px
+        const size = Math.random() * 20 + 15;
+        sakura.style.width = `${size}px`;
+        sakura.style.height = `${size}px`;
+
+        // Vị trí xuất phát ngẫu nhiên theo chiều ngang
+        sakura.style.left = `${Math.random() * 100}%`;
+        sakura.style.top = "-5%";
+
+        // Thời gian rơi ngẫu nhiên từ 8s đến 20s
+        const animationDuration = Math.random() * 12 + 8;
+        sakura.style.animationDuration = `${animationDuration}s`;
+
+        // Delay ngẫu nhiên để không rơi cùng lúc
+        const animationDelay = Math.random() * 10;
+        sakura.style.animationDelay = `${animationDelay}s`;
+
+        // Thêm vào container
+        container.appendChild(sakura);
+
+        // Xóa hoa sau khi animation kết thúc để giảm tải DOM
+        setTimeout(() => {
+          sakura.remove();
+        }, (animationDuration + animationDelay) * 1000);
+      }
+
+      // Chạy hiệu ứng sakura khi scroll đến phần testimonial
+      function handleScrollEffects() {
+        const testimonialSection = document.querySelector(
+          ".testimonials-container"
+        );
+        if (!testimonialSection) return;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Khi cuộn đến phần testimonial
+                createSakura();
+                observer.unobserve(entry.target); // Chỉ chạy 1 lần
+              }
+            });
+          },
+          { threshold: 0.1 }
+        ); // Hiện 10% section là bắt đầu hiệu ứng
+
+        observer.observe(testimonialSection);
+      }
+
+      // Gọi các hàm khi trang đã load
+      document.addEventListener("DOMContentLoaded", () => {
+        handleScrollEffects();
+
+        // Nếu muốn luôn chạy mà không cần scroll, hãy uncomment dòng dưới đây
+        // createSakura();
+      });
+      // Hàm tạo bong bóng mới mỗi khi một bong bóng bay hết
+      function createBubbles() {
+        const heroContainer = document.querySelector(".hero-container");
+        const bubblePositions = [
+          { left: "15%", size: "25px" }, // Tăng size từ 15px lên 25px
+          { left: "25%", size: "35px" }, // Tăng size từ 20px lên 35px
+          { left: "35%", size: "22px" }, // Tăng size từ 12px lên 22px
+          { left: "60%", size: "28px" }, // Tăng size từ 18px lên 28px
+          { left: "75%", size: "20px" }, // Tăng size từ 10px lên 20px
+        ];
+
+        // Tạo bong bóng mỗi 2 giây
+        setInterval(() => {
+          // Chọn ngẫu nhiên vị trí bong bóng
+          const position =
+            bubblePositions[Math.floor(Math.random() * bubblePositions.length)];
+
+          // Tạo phần tử bong bóng
+          const bubble = document.createElement("div");
+          bubble.className = "dynamic-bubble";
+          bubble.style.left = position.left;
+          bubble.style.width = position.size;
+          bubble.style.height = position.size;
+
+          // Thêm bong bóng vào container
+          heroContainer.appendChild(bubble);
+
+          // Xóa bong bóng sau khi animation kết thúc
+          setTimeout(() => {
+            bubble.remove();
+          }, 6000);
+        }, 2000);
+      }
+
+      // Gọi hàm khi trang web đã tải xong
+      document.addEventListener("DOMContentLoaded", createBubbles);
+    </script>
+  </body>
+</html>
