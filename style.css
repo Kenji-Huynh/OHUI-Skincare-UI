@@ -1181,6 +1181,7 @@ h3 {
   margin: 40px 0;
 }
 
+/* Điều chỉnh hover effect cho product card - màu hồng từ dưới lên tới phần giá */
 .product-card {
   flex: 1;
   display: flex;
@@ -1190,51 +1191,93 @@ h3 {
   padding: 20px;
   border-radius: 10px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+  background-color: #fff;
+}
+
+/* Điều chỉnh overlay sẽ chỉ phủ một phần card đến phần "Thể tích: 60ml" */
+.product-card-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Giảm chiều cao xuống chỉ đến phần thể tích */
+  background: linear-gradient(
+    to top,
+    rgba(246, 186, 214, 0.3) 0%,
+    /* Thay đổi màu sang #F6BAD6 */ rgba(246, 186, 214, 0.4) 15%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.6s ease-out, opacity 0.2s ease-out;
+  z-index: 1;
+  border-radius: 0 0 10px 10px; /* Chỉ bo góc dưới */
+}
+
+/* Phần trắng mờ ở trên */
+.product-card::before {
+  content: "";
+  position: absolute;
+  bottom: 40%; /* Khớp với chiều cao của product-card-hover */
+  left: 0;
+  width: 100%;
+  height: 25%; /* Phần chuyển tiếp từ hồng sang trắng */
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.6s ease-out, opacity 0.2s ease-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Kích hoạt cả hai hiệu ứng khi hover */
+.product-card:hover .product-card-hover,
+.product-card:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Đảm bảo phần nội dung và hình ảnh vẫn hiển thị trên lớp phủ */
+.product-card-image,
+.product-card-title,
+.product-card-price,
+.product-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Tùy chỉnh thời gian chạy animation để mượt mà hơn */
+.product-card::before {
+  transition-delay: 0.1s; /* Phần trắng mờ sẽ xuất hiện sau phần hồng một chút */
+}
+
+.product-card-hover {
+  transition-duration: 0.7s; /* Làm cho phần hồng chạy lên chậm hơn một chút */
 }
 
 .product-card-image {
-  width: 100%;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.product-card-image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  position: relative;
+  z-index: 2; /* Đặt z-index cao hơn overlay để không bị phủ */
+  margin-bottom: 15px;
 }
 
 .product-card-content {
   width: 100%;
   text-align: center;
   z-index: 2;
+  position: relative;
+  transition: transform 0.4s ease;
 }
 
-.product-card-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  min-height: 40px;
-  font-family: "Inter", sans-serif;
-}
-
-.product-card-capacity {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.product-card-price {
-  font-size: 18px;
-  color: #e91e63;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
+/* Tách riêng hiệu ứng của button khỏi hiệu ứng hover của card */
 .product-card-button {
   display: inline-block;
   padding: 10px 20px;
@@ -1244,37 +1287,62 @@ h3 {
   border-radius: 30px;
   text-decoration: none;
   font-size: 14px;
-  transition: all 0.5s ease;
+  position: relative;
+  z-index: 3;
+  transition: all 0.4s ease;
 }
 
-/* Hover effect */
-.product-card-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 240, 245, 0.95),
-    rgba(255, 192, 203, 0.8)
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
-  border-radius: 10px;
-  cursor: pointer;
+/* Button chỉ đổi style khi hover vào button, không phụ thuộc vào hover của card */
+.product-card-button:hover {
+  background-color: #e91e63;
+  color: white;
+  box-shadow: 0 4px 8px rgba(233, 30, 99, 0.25);
 }
 
-.product-card:hover .product-card-hover {
-  opacity: 1;
+/* Điều chỉnh thông tin sản phẩm để hiển thị đẹp hơn khi hover */
+.product-card:hover .product-card-title {
+  color: #333;
+}
+
+.product-card:hover .product-card-price {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* Đảm bảo nút mua hàng không tự động thay đổi khi hover vào card */
+.product-card:hover .product-card-button {
+  /* Không thay đổi gì ở đây để đảm bảo button chỉ thay đổi khi hover vào nó */
+  transform: translateY(0);
+}
+
+.product-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  min-height: 40px;
+  font-family: "Inter", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.product-card-price {
+  font-size: 18px;
+  color: #e91e63;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.product-card:hover .product-card-title {
+  color: #333;
+}
+
+.product-card:hover .product-card-price {
+  color: #e91e63;
+  font-weight: bold;
 }
 
 .product-card:hover .product-card-button {
-  background-color: #e91e63;
-  color: white;
-  z-index: 3;
-  position: relative;
+  transform: translateY(5px);
 }
 
 /* Responsive adjustments */
